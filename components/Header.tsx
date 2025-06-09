@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
         // position: 'absolute',
         // top: 0,
         marginBottom: 20,
+        marginTop: 0
 
     },
     title: {

@@ -1,20 +1,40 @@
 import { View, Text, StyleSheet, Image, SafeAreaView, Platform, ScrollView } from 'react-native'
 import React from 'react'
-import Header from './components/Header'
-import Sections from './components/Sections'
-import Productos from './components/Productos'
-import Footer from './components/Footer'
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Home from './views/Home'
+import Search from './views/Search'
+import Settings from './views/Settings'
+import Shop from './views/Shop'
+import Profile from './views/Profile'
+
+import TabBarCustom from './navigation/TabBarCustom';
+import NavegationCustom from './navigation/NavegationCustom'
 
 
 const App = () => {
+
+  const Tab = createBottomTabNavigator()
+
+
   return (
-    <SafeAreaView style={styles.container}>
-      <Header />
-      <Sections />
-      <Productos />
-      <Footer />
-      {/* <Image style={{ width: 200, height: 300 }} source={require('./assets/silla1.jpg')} /> */}
-    </SafeAreaView>
+    <NavigationContainer>
+      {/* <Tab.Navigator
+        tabBar={(props) => <TabBarCustom {...props} />}
+      >
+        <Tab.Screen name='home' component={Home} options={{
+          headerShown: false,
+        }} />
+        <Tab.Screen name='search' component={Search} />
+        <Tab.Screen name='setting' component={Settings} />
+        <Tab.Screen name='shop' component={Shop} />
+        <Tab.Screen name='profile' component={Profile} />
+      </Tab.Navigator>*/}
+      <NavegationCustom />
+
+
+    </NavigationContainer >
   )
 }
 

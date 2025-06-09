@@ -4,13 +4,7 @@ import Option from './Option'
 
 const Footer = () => {
     return (
-        <View style={styles.footer}>
-            <Option icono='home' />
-            <Option icono='search-outline' />
-            <Option icono='grid-outline' background colorIcon />
-            <Option icono='bag-handle-outline' />
-            <Option icono='person-outline' />
-        </View>
+       
     )
 }
 
