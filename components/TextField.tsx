@@ -11,9 +11,11 @@ interface Props {
     control: Control<any>,
     rules?: object;
     name: string;
+    secure?: boolean;
+
 }
 
-const TextField = ({ type, placeholder, control, rules, name }: Props) => {
+const TextField = ({ type, placeholder, control, rules, name, secure }: Props) => {
 
 
 
@@ -46,6 +48,7 @@ const TextField = ({ type, placeholder, control, rules, name }: Props) => {
                         onChangeText={onChange}
                         value={value?.toString()}
                         onBlur={onBlur}
+                        secureTextEntry={secure}
                     />
                     {error && <Text>{error.message}</Text>}
                 </>
