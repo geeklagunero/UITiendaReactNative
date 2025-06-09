@@ -2,20 +2,15 @@ import { View, Text, StyleSheet, Image, SafeAreaView, Platform, ScrollView } fro
 import React from 'react'
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Home from './views/Home'
-import Search from './views/Search'
-import Settings from './views/Settings'
-import Shop from './views/Shop'
-import Profile from './views/Profile'
 
-import TabBarCustom from './navigation/TabBarCustom';
+
+
 import NavegationCustom from './navigation/NavegationCustom'
 
 
 const App = () => {
 
-  const Tab = createBottomTabNavigator()
+
 
 
   return (
